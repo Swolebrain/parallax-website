@@ -55,3 +55,16 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.grey-bg{
+  background-color:rgba(50,50,50,.4);
+}
+
+.white-halo{
+  text-shadow:0 0 3px #DDD;
+}
+
+body, .light-grey-bg{
+  background-color: rgb(230,230,230);
+}
+
