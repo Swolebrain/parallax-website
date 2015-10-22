@@ -9,12 +9,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
-  <style>
-      nav .brand-logo,nav ul a{color:#2C2C2C}p{line-height:2rem}.button-collapse{color:#26a69a}.parallax-container{min-height:380px;line-height:0;height:auto;color:rgba(255,255,255,.9)}.parallax-container .section{width:100%}@media only screen and (max-width :992px){.parallax-container .section{position:absolute;top:40%}#index-banner .section{top:10%}}@media only screen and (max-width :600px){#index-banner .section{top:0}}.icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}footer.page-footer{margin:0}body{background-color:#141414}.shadow{text-shadow:0 0 10px rgba(0,0,0,.75)}.shadow2{background-color:rgba(0,0,0,.75)}.black{background-color:#000}.shadow-div{box-shadow:0 0 20px rgba(0,0,0,.75);margin:0 0 2px}.brown{background-color:#961414}.stroke-text{-webkit-text-fill-color:#fff;-webkit-text-stroke-color:#000;-webkit-text-stroke-width:1px;text-fill-color:#fff;text-stroke-color:#000;text-stroke-width:1px}.text-white{color:#fafafa}.btnHeigth{margin-top:auto}.size-text{font-size:170%}.size-icon{font-size:350%;display:inherit}.navcolor{color:#fff}.insideshadow{background-color:0,0,0,.75)}.boxbackground,.boxshadow{background-color:#221d1d}.boxshadow{box-shadow:0 0 20px #2bbbad;margin:0 auto auto}.textcolor1{color:#2C2C2C}
-      body{background-color:#ccc;}
-      .hidden{display:none;}
-  </style>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-grey-bg" role="navigation" id="navbar">
@@ -123,8 +118,7 @@
 
     </div>
   </div>
-    
-    <!-- http://www.swolebrain.com:4003/email-->
+
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -136,42 +130,6 @@
     </div>
     <div class="parallax"><img src="img/black-hole.jpg" alt="Unsplashed background img 3"></div>
   </div>
-    
-    <div class="container">
-        <form onsubmit="event.preventDefault();" class="col s12" action="http://www.swolebrain.com:4003/email" id="dingleberry" method="post">
-                      <div class="row">
-                        <div class="input-field col s6">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name" class="teal-text">First Name</label>
-                            <input type="hidden" value="vmoreno@fvi.edu" name="dest_email">
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name" class="teal-text">Last Name</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <input id="email" type="email" class="validate">
-                          <label for="email" class="teal-text">Email</label>
-                        </div>
-                      </div>
-                        <div class="row">
-                             <div class="input-field col s12">
-                                <textarea id="textarea1" class="materialize-textarea" length="150"></textarea>
-                                <label for="textarea1" class="teal-text">Type message</label>
-                             </div>
-                        </div>
-                        <div class="row">
-                            <button class="btn waves-effect waves-light" onclick="submitForm();" name="action" id="action">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                            <div id="form-feedback" class="hidden">
-                            </div>
-                        
-                        </div>
-                    </form>
-    </div>
 
   <footer class="page-footer deep-purple" id="purple-footer">
     <div class="container">
@@ -210,42 +168,13 @@
       Made by Victor Moreno using <a class="amber-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
-      
-      
-      
-      
-      
-      
-      
   </footer>
 
 
   <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-    <script>
-        function submitForm(){
-            //some validation code here
-            //graphical feedback for user
-                //1- hide button
-            $("#action").addClass("hidden");
-                //2- display div #form-feedback
-            $("#form-feedback").removeClass("hidden");
-                //3- set form-feedback message to "Your message is being sent"
-            $("#form-feedback").html("Your message is being sent...");
-            //actually submit the form
-            var form = $("#dingleberry");
-            $.ajax({
-                type: "POST",
-                url: form.attr("action"),
-                data: form.serialize(),
-                success: function(a, b, c){
-                    console.log(a+" "+b);
-                    $("#form-feedback").html("Your message was sent!");
-                }
-            });
-        }
-    </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
   </body>
 </html>
